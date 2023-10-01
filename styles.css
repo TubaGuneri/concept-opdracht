@@ -14,18 +14,210 @@
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 
+*{
+    margin: 0;
+    padding: 0;
+    border-box: box-sizing;
+}
+
+:root {
+    --primary-text: #0C0C0C;
+    --primary-background: #4845e4;
+    --secondary-h: #5722CD;
+    --secondary-light-background-text: #F2F0FF;
+    --button: #ED4385;
+    --projects-bonus: #F3F6F9;
+    --shadow-bonus: #7A7A7A;
+}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto&display=swap');
+
 /* ------------------------------- 2. Typography ----------------------------------- */
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3{
+    font-family: 'Merriweather', serif;
+}
+
+button, input {
+    border-radius: 20px;
+    background-color: var(--button);
+    color: inherit;
+    box-shadow: 2px 2px 10px rgba(30, 29, 96, 0.89);
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
 
+
+.outer-container {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    border: 2px dashed black;
+   align-items: center;
+}
+
+.inner-container {
+    flex-basis: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+    border: 2px dashed orange;
+    align-items: center;
+    width: 700px;
+}
+
+.image-wrapper {
+    border: 2px dashed red;
+    flex-basis: 600px;
+    flex-grow: 0;
+    flex-shrink: 1
+}
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
 
+header {
+    background-color: var(--primary-background);
+    color: white;
+    position: relative;
+}
+.header-navi a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-navi {
+    border: 2px dashed yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: #F2F0FF;
+    width: 177%;
+    padding: 10px 30px;
+}
+.header-navi ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 400px;
+    padding: 0 10px;
+    font-size: 12px;
+}
+ul a {
+    color: white;
+}
+.header-content-text {
+    border: 2px dashed greenyellow;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+    text-align: center;
+    gap: 2rem;
+    font-size: 18px;
+}
+.question-introduction{
+    font-size: 16px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.header-button {
+    border: 2px dashed greenyellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  flex-basis: 40px;
+       align-items: center;
+}
+.header-button button{
+    padding: 15px 30px;
+    font-size: 10px;
+    border-radius: 30px;
+    margin: 25px 0;
+    border-style: none;
+}
+
+.header-img{
+position: relative;
+}
+
+.squiggle_line_stripe{
+    position: relative;
+    bottom: -50px;
+    scale: 70%;
+}
+
 /* --------------- 4.2 Introduction ------------------- */
+
+.introduction {
+display: flex;
+
+}
+
+.introduction-text {
+    color: var(--secondary-h);
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 35px;
+    font-size: 1.5rem;
+}
+a {
+    text-decoration: none;
+    color: var(--secondary-h);
+}
+.introduction-text p{
+color: var(--primary-text);
+}
+
+article {
+    background-color:var(--projects-bonus);
+    border: 2px dashed orange;
+}
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row
+}
+.flex-container>div {
+    text-align: left;
+    margin: 30px;
+}
+.flex-reverse{
+    flex-direction: row-reverse;
+}
+.rolling-stone {
+flex-grow: 2;
+    width: 200px;
+    height: 200px;
+
+}
+.work-image {
+    width: 100%;
+    min-width: 200px;
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.squiggle_line {
+    margin: 50px 0;
+}
+.p-view-project {
+    margin: 50px 0;
+
+    link: pointer;
+    font: small-caps bold 12px/1 sans-serif;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
