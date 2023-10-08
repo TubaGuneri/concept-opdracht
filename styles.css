@@ -72,6 +72,10 @@ button {
     border: 2px dashed orange;
     align-items: center;
     width: 1000px;
+    position: relative;
+}
+.inner-container>h3 {
+    z-index: 2;
 }
 
 .image-wrapper {
@@ -85,6 +89,7 @@ button {
 header {
     background-color: var(--primary-background);
     color: white;
+
 
 }
 .header-navi a:active {
@@ -154,12 +159,35 @@ position: relative;
     scale: 70%;
 }
 
+
+
+
+/*.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right:10px solid blue;
+}*/
+
+
 /* --------------- 3.2 Introduction ------------------- */
 
 .introduction {
-display: flex;
-
+    display: flex;
+    background-color: white;
 }
+.bgtext::after {
+    content: "hello";
+    color: var(--secondary-light-background-text);
+    font-weight: bold;
+    font-size: 500px;
+    position: absolute;
+    left: -70px;
+    z-index: 1;
+    top: -80px;
+}
+
 
 .introduction-text {
     color: var(--secondary-h);
@@ -180,12 +208,16 @@ color: var(--primary-text);
 section {
     background-color:var(--projects-bonus);
     border: 2px dashed orange;
+    padding-top: 150px;
+    position: relative;
 }
+
 .flex-container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    flex-direction: row
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .flex-container>div {
     text-align: left;
@@ -198,11 +230,27 @@ section {
 flex-grow: 2;
     width: 200px;
     height: 200px;
+}
 
+.rolling-stone>h2 {
+    z-index: 3;
+    position: relative;
+}
+.project-bgtext::after {
+    content: "work";
+    color: white;
+    font-weight: bold;
+    font-size: 500px;
+    position: absolute;
+    left: 400px;
+    z-index: 1;
+    top: -80px;
 }
 .work-image {
     width: 100%;
     min-width: 200px;
+    z-index: 2;
+    position: relative;
 }
 
 .image-wrapper {
@@ -223,6 +271,18 @@ flex-grow: 2;
 /* --------------- 3.3 Services articles------------------- */
 .services-section {
     display: flex;
+    background-color: white;
+}
+
+.services-bgtext::after {
+    content: "services";
+    color: var(--secondary-light-background-text);
+    font-weight: bold;
+    font-size: 300px;
+    position: absolute;
+    left: 300px;
+    z-index: 1 ;
+    top: 15px;
 }
 
 .service-article img {
@@ -234,14 +294,15 @@ flex-grow: 2;
     flex-basis: 400px;
     text-align: left;
     border: 2px solid var(--secondary-h);
-    box-shadow: 0.3em 0.8em 1.2em rgba(204, 204, 204, 0.70);
+    box-shadow: 0.1em 0.4em 1.2em rgba(204, 204, 204, 0.70);
     flex-grow: 5;
     margin: 20px;
     padding:  50px;
+    z-index: 2;
+    background-color: white;
 }
 
-
-.inner-container__service-grid {
+.article-sections__service-grid {
     flex-basis: 400px;
     display: flex;
     flex-direction: row;
@@ -251,14 +312,15 @@ flex-grow: 2;
     margin: 0 20px;
     border: 2px dashed orange;
     padding: 100px 170px 100px 170px;
+
+
 }
 .service-article h4{
     color: var(--secondary-h);
-    margin-bottom: 10px;
-
+    margin-bottom: 30px;
     font-size: 30px;
 }
-.inner-container__service-grid p {
+.article-sections__service-grid p {
     color: var(--service-tegels);
 }
 /* --------------- 3.4 Contact form------------------- */
@@ -330,3 +392,58 @@ footer {
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+@media screen and (max-width: 670px) {
+    body{
+        font-size: 24px;
+    }
+
+    .inner-container {
+        width: 100%;
+        margin: 0;
+    }
+    .bgtext::after {
+      letter-spacing: -10px;
+       font-size: 270px;
+        left:20px;
+        top: -20px;
+    }
+
+    .introduction-text {
+        gap: unset;
+        justify-content: flex-end;
+        gap: 40px
+    }
+    .flex-container{
+        flex-direction: column-reverse;
+    }
+    .rolling-stone {
+        flex-grow: 2;
+        width: fit-content;
+        height: fit-content;
+    }
+    .image-wrapper {
+        flex-basis: 400px;
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+    .article-sections__service-grid {
+        flex-basis: 400px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        margin: 0 20px;
+        border: 2px dashed orange;
+        padding: 0;
+    }
+    .project-bgtext::after {
+        letter-spacing: -10px;
+        font-size: 170px;
+        left: 150px;
+        top: 50px;
+    }
+    .services-bgtext::after {
+        letter-spacing: -10px;
+        font-size: 175px;
+        left: 20px;
+       top:35px;
+    }
