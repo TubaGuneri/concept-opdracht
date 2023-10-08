@@ -2,30 +2,499 @@
     Table of Contents
     1. Global Styles
     2. Typography
-    3. Layout
+    3. Main
         3.1 Reusables
-        3.2 Other
-    4. Areas
-        4.1 Header
-        4.2 Introduction
-        etc.
+        3.2 Header
+        3.3 Introduction
+        3.4 Projects
+        3.5 Services
+        3.6 Contact form
+    4. Footer
     5. Media Queries
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text: #0C0C0C;
+    --primary-background: #4845e4;
+    --secondary-h: #5722CD;
+    --secondary-light-background-text: #F2F0FF;
+    --button: #ED4385;
+    --projects-bonus: #F3F6F9;
+    --service-tegels: #9d9d9d;
+}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto&display=swap');
+
 /* ------------------------------- 2. Typography ----------------------------------- */
 
-/* ------------------------------- 3. Layout --------------------------------------- */
+body{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Merriweather, 'Times New Roman', serif;
+}
+
+button {
+    border-radius: 20px;
+    background-color: var(--button);
+    color: inherit;
+    box-shadow: 2px 2px 10px rgba(30, 29, 96, 0.89);
+}
+
+/* ------------------------------- 3. Main --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
 
-/* --------------- 3.2 Other --------------------------- */
 
-/* ------------------------------- 4. Areas ---------------------------------------- */
+.outer-container {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
 
-/* --------------- 4.1 Header ------------------------- */
+.inner-container {
+    flex-basis: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+    align-items: center;
+    width: 1000px;
+    position: relative;
+}
+.inner-container>h3 {
+    z-index: 2;
+}
 
-/* --------------- 4.2 Introduction ------------------- */
+.image-wrapper {
+    flex-basis: 600px;
+    flex-grow: 0;
+    flex-shrink: 1
+}
+.p-view-project a:hover{
+    content: "---";
+    display: inline-block;
+}
+
+ /* --------------- 3.2 Header ------------------------- */
+
+header {
+    background-color: var(--primary-background);
+    color: white;
+}
+.header-navi a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-navi {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: #F2F0FF;
+    width: 100%;
+    padding: 10px 30px;
+}
+.header-navi ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 400px;
+    padding: 0 10px;
+    font-size: 20px;
+    margin-right: 100px;
+}
+ul a {
+    color: white;
+}
+.header-content-text {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+    text-align: center;
+    gap: 2rem;
+    font-size: 18px;
+}
+.question-introduction{
+    font-size: 16px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.header-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+.header-button button{
+    padding: 15px 30px;
+    font-size: 10px;
+    border-radius: 30px;
+    margin: 25px 0;
+    border-style: none;
+}
+
+.header-img{
+position: relative;
+}
+
+.squiggle_line_stripe{
+    position: relative;
+    bottom: -90px;
+    scale: 80%;
+}
+
+
+.arrow-left{
+    border-top: 0 solid transparent;
+    border-bottom: 8em solid transparent;
+    border-right:170em solid var(--primary-background);
+    margin-bottom: -10px;
+}
+
+
+/* --------------- 3.3 Introduction ------------------- */
+
+.introduction {
+    display: flex;
+    background-color: white;
+}
+.bgtext::after {
+    content: "hello";
+    color: var(--secondary-light-background-text);
+    font-weight: bold;
+    font-size: 500px;
+    position: absolute;
+    left: -70px;
+    z-index: 1;
+    top: -100px;
+}
+
+
+.introduction-text {
+    color: var(--secondary-h);
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 35px;
+    font-size: 1.5rem;
+}
+a {
+    text-decoration: none;
+    color: var(--secondary-h);
+}
+.introduction-text p{
+color: var(--primary-text);
+}
+
+
+/* --------------- 3.4 Projects ------------------- */
+.arrow-right {
+    height: 100px;
+    border-bottom: 0 solid transparent;
+    border-top: 8em solid transparent;
+    border-left: 119em solid var(--projects-bonus);
+    margin-top: 10px;
+}
+
+section {
+    background-color:var(--projects-bonus);
+    position: relative;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.flex-container>div {
+    text-align: left;
+    margin: 30px;
+}
+.flex-reverse{
+    flex-direction: row-reverse;
+}
+.rolling-stone {
+flex-grow: 2;
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+}
+
+.rolling-stone>h2 {
+    position: relative;
+}
+.project-bgtext::after {
+    content: "work";
+    color: white;
+    font-weight: bold;
+    font-size: 700px;
+    position: absolute;
+    left: 400px;
+    z-index: 1;
+    top: -120px;
+}
+
+.work-image {
+    width: 100%;
+    min-width: 200px;
+    box-shadow:  0.3em 1.5em 1.4em rgba(0, 0, 0, 0.2);
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    z-index: 2;
+}
+
+.squiggle_line {
+    margin: 50px 0;
+}
+.p-view-project {
+    margin: 50px 0;
+    link: pointer;
+    font: small-caps bold 12px/1 sans-serif;
+}
+
+/* --------------- 3.5 Services ------------------- */
+.services-arrow-left {
+    border-top: 0 solid transparent;
+    border-bottom: 8em solid transparent;
+    border-right:170em solid var(--projects-bonus);
+    margin-bottom: -10px;
+}
+
+.services-section {
+    display: flex;
+    background-color: white;
+}
+
+.services-bgtext::after {
+    content: "services";
+    color: var(--secondary-light-background-text);
+    font-weight: bold;
+    font-size: 400px;
+    position: absolute;
+    left: 400px;
+    z-index: 1 ;
+    top: -196px;
+}
+
+.service-article img {
+    width: 50px;
+    margin: 16px 0;
+}
+
+.service-article {
+    flex-basis: 400px;
+    text-align: left;
+    border: 2px solid var(--secondary-h);
+    box-shadow: 0.1em 0.4em 1.2em rgba(204, 204, 204, 0.70);
+    flex-grow: 5;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 50px;
+    z-index: 2;
+    background-color: white;
+}
+
+.article-sections__service-grid {
+    flex-basis: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 20px;
+    column-gap: 20px;
+    margin: 0 20px;
+    padding: 100px 300px 100px 300px;
+
+
+}
+.service-article h4{
+    color: var(--secondary-h);
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+.article-sections__service-grid p {
+    color: var(--service-tegels);
+}
+/* --------------- 3.6 Contact form------------------- */
+.form-arrow-right {
+    border-bottom: 0 solid transparent;
+    border-top: 4em solid transparent;
+    border-left: 119em solid var(--primary-background);
+}
+
+.contact-form {
+    background-color: var(--primary-background);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    gap: 2rem;
+}
+
+form div {
+    width: 100%;
+}
+fieldset input {
+    width: 100%;
+    height: 4em;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+fieldset textarea{
+    min-width: 70em;
+    min-height: 300px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+fieldset label {
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+textarea {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+}
+
+fieldset div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.send-button {
+    border-radius: 30px;
+    width: 20%;
+    padding: 20px 50px;
+    align-items: center;
+}
+
+fieldset {
+    width: 100%;
+}
+
+/* --------------- 4. Footer ------------------- */
+footer {
+    text-align: center;
+    background-color: var(--primary-text);
+    color: white;
+    padding: 40px;
+    font-size: 16px;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+@media screen and (max-width: 670px) {
+    body {
+        font-size: 24px;
+    }
+
+    .inner-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .bgtext::after {
+        letter-spacing: -10px;
+        font-size: 270px;
+        left: 20px;
+        top: -20px;
+    }
+
+    .introduction-text {
+        gap: unset;
+        justify-content: flex-end;
+        gap: 40px
+    }
+
+    .flex-container {
+        flex-direction: column-reverse;
+        padding: unset;
+    }
+    .flex-container>div {
+        margin: 130px 30px 0 30px;
+    }
+
+    .rolling-stone {
+        flex-grow: 2;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .image-wrapper {
+        flex-basis: 400px;
+        flex-grow: 0;
+        flex-shrink: 1;
+        margin-top: 100px;
+    }
+
+    .article-sections__service-grid {
+        flex-basis: 400px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        margin: 100px 20px 0 20px;
+        padding: 0;
+    }
+
+    .project-bgtext::after {
+        letter-spacing: -10px;
+        font-size: 170px;
+        left: calc(100% - 80%);
+        top: 0;
+    }
+
+    .services-bgtext::after {
+        letter-spacing: -15px;
+        font-size: 175px;
+        left: 20px;
+        top: -25px;
+    }
+    fieldset textarea{
+        min-width: 42em;
+        min-height: 300px;
+        margin-bottom: 30px;
+        padding-left: 20px;
+    }
+    .send-button {
+        width: 30%;
+        padding: 20px 50px;
+        align-items: center;
+    }
+
+    .arrow-left{
+        border-bottom: 4em solid transparent;
+        border-right:27em solid var(--primary-background);
+    }
+    .arrow-right {
+        border-top: 4em solid transparent;
+        border-left: 27em solid var(--projects-bonus);
+    }
+    .services-arrow-left {
+        border-bottom: 4em solid transparent;
+        border-right:27em solid var(--projects-bonus);
+    }
+    .form-arrow-right {
+        border-top: 4em solid transparent;
+        border-left: 27em solid var(--primary-background);
+    }
+}
