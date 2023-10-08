@@ -2,13 +2,14 @@
     Table of Contents
     1. Global Styles
     2. Typography
-    3. Layout
+    3. Main
         3.1 Reusables
-        3.2 Other
-    4. Areas
-        4.1 Header
-        4.2 Introduction
-        etc.
+        3.2 Header
+        3.3 Introduction
+        3.4 Projects
+        3.5 Services
+        3.6 Contact form
+    4. Footer
     5. Media Queries
 ////////////////////////*/
 
@@ -51,7 +52,7 @@ button {
     box-shadow: 2px 2px 10px rgba(30, 29, 96, 0.89);
 }
 
-/* ------------------------------- 3. Layout --------------------------------------- */
+/* ------------------------------- 3. Main --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
 
@@ -89,7 +90,7 @@ button {
     display: inline-block;
 }
 
- /* --------------- 3.1 Header ------------------------- */
+ /* --------------- 3.2 Header ------------------------- */
 
 header {
     background-color: var(--primary-background);
@@ -172,7 +173,7 @@ position: relative;
 }
 
 
-/* --------------- 3.2 Introduction ------------------- */
+/* --------------- 3.3 Introduction ------------------- */
 
 .introduction {
     display: flex;
@@ -206,7 +207,7 @@ color: var(--primary-text);
 }
 
 
-/* --------------- 3.2 Projects ------------------- */
+/* --------------- 3.4 Projects ------------------- */
 .arrow-right {
     height: 100px;
     border: 2px dashed red;
@@ -279,7 +280,7 @@ flex-grow: 2;
     z-index: 3;
 }
 
-/* --------------- 3.3 Services articles------------------- */
+/* --------------- 3.5 Services ------------------- */
 .services-arrow-left {
     border: 2px dashed red;
     border-top: 0 solid transparent;
@@ -344,7 +345,7 @@ flex-grow: 2;
 .article-sections__service-grid p {
     color: var(--service-tegels);
 }
-/* --------------- 3.4 Contact form------------------- */
+/* --------------- 3.6 Contact form------------------- */
 .form-arrow-right {
     border: 2px dashed red;
     border-bottom: 0 solid transparent;
@@ -409,7 +410,7 @@ fieldset {
     width: 100%;
 
 }
-/* --------------- 3.5 Footer ------------------- */
+/* --------------- 4. Footer ------------------- */
 footer {
     text-align: center;
     background-color: var(--primary-text);
